@@ -1,0 +1,149 @@
+:root {
+    font-size: 12px;
+}
+textarea, input {
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+input[type="search"] {
+    padding: 3px 10px;
+    border-radius: 100px;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    color: white;
+    margin: 2px 5px;
+}
+.btn-small {
+    padding: 0.2rem 0.4rem;
+    color: white;
+    margin: 2px 2px;
+}
+.btn-rounded {
+    padding: 0.5rem 1rem;
+    border-radius: 9999rem;
+    color: white;
+    margin: 2px 5px;
+}
+.btn-primary {
+    background-color: #409DFE;
+}
+.btn-safe {
+    background-color: #68C23A;
+}
+.btn-warn {
+    background-color: #EC9F05;
+}
+.btn-danger {
+    background-color: #F75555;
+}
+.btn-gray {
+    background-color: #878E9A;
+}
+.btn-holo {
+    border: 1px solid #ccc;
+    color: #ccc
+}
+.btn-tag {
+    background-color: #EBF3FF;
+    color: #6AAAE8;
+    border: 1px solid #6AAAE8;
+}
+
+.navbar {
+    line-height: 4rem;
+    background-color: black;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.navbar a {
+    margin: 1rem
+}
+
+
+
+.sidebar {
+    width: 200px;
+    background-color: #545C64;
+}
+.sidebar a {
+    color: #eee;
+    display: block;
+    line-height: 3rem;
+}
+.sidebar a:hover {
+    color: #BEBEBE
+}
+.sidebar li {
+    padding-left: 20px;
+}
+.sidebar .sidebar-close::before {
+    content: "\e7eb";
+    float: right;
+    margin: 0px 20px;
+    font-family:"iconfont" !important;
+    font-size:12px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.sidebar .sidebar-open::before {
+    content: "\e7ec";
+    float: right;
+    margin: 0px 20px;
+    font-family:"iconfont" !important;
+    font-size:12px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.toolbar {
+    float: left;
+    padding: 5px 20px;
+    border-bottom: 2px solid #eee;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+.toolbar-title {
+    margin: 0 auto;
+    font-size: 2rem
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-button::before {
+    content: "\e8ef";
+    position: relative;
+    right: 25px;
+    color: #ccc
+}
+.object-search-info {
+    margin: 0 5px;
+    color: #070707
+}
+.node-display-max {
+    margin: 0 10px;
+}
+.node-display-max a {
+    color: #888
+}
+.node-display-max a.active {
+    color: #d55
+}
+.toolbar-action {
+    margin: 0 5px;
+    color: #5899c0
+}
+.sidebar li.active > a {
+    color: #dcc540
+}

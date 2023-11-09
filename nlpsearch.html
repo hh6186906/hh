@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<style type="text/css">
+  
+  ul,li{ padding:0; margin:0; overflow:hidden;}
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="static/css/bootstrap.css">
+  <link rel="stylesheet" href="static/css/tailwind.css">
+  <link rel="stylesheet" href="static/css/iconfont.css">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+
+<body>
+  <nav class="navbar">
+    <h1 class="mx-16 font-bold text-3xl">基于知识图谱的粮食仓储工艺及进出仓设备智能决策系统</h1>
+    <div class="mx-auto">
+      <a href="">主页</a>
+      <a href="">测试</a>
+      <a href="">导航</a>
+    </div>
+  </nav>
+  <div class="main">
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a class="sidebar-open" href="">知识查询</a>
+          <ul>
+            <li class="active"><a href="#">自然语言查询</a></li>
+            <li><a href="index.html">实体查询</a></li>
+            <li><a href="cy.html">Cypher查询</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="sidebar-open" href="">知识管理</a>
+          <ul>
+            <li>
+              <a class="sidebar-open" href="">节点管理</a>
+              <ul>
+                <li><a href="">创建节点</a></li>
+                <li><a href="editnode.html">修改节点</a></li>
+                <li><a href="">删除实体</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sidebar-open" href="">关系管理</a>
+			   <ul>
+                <li><a href="">创建关系</a></li>
+                <li><a class="active" href="editrela.html">修改关系</a></li>
+                <li><a href="">删除关系</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="sidebar-open" href="">数据存取</a>
+          <ul>
+            <li><a href="#">导入图谱</a></li>
+            <li><a href="#">导出图谱</a></li>
+          </ul>
+        </li>
+        <li><a class="sidebar-close" href="#">帮助</a></li>
+      </ul>
+    </div>
+    <div class="content flex-1">
+      <div class="toolbar">
+         <h1 class="mx-1  font-bold text-3xl">粮食仓储工艺及进出仓设备知识图谱</h1>
+      </div>
+      <div class="toolbar">
+        请输入查询语句：
+        <input type="search" value="储粮难点可划分为哪些方面" style="width: 300px;">
+        <a  id='search' class="iconfont search-button" href="javascript:void(0)"></a>
+      </div>
+      <div class="toolbar">
+        特征提取结果：<textarea cols="50" rows="1">储粮  难点  划分  方面  </textarea>
+      </div>
+      <div class="toolbar">
+        问题答案：<textarea cols="50" rows="1.5">粮堆发热  粮堆结露  诱捕害虫  害虫预防  微生物控制</textarea>
+      </div>
+      <div class="toolbar">
+        <div style="padding-left: 0%;font-size:20px">
+           <li style='list-style: none'><img id='show_nlp' src='img/nlp.png' style='display: none'></li>
+        </div>
+         <div style="padding-left: 10%;font-size:20px">
+          
+        </div>
+      </div>
+      <!-- 在这里添加内容 -->
+    </div>
+  </div>
+  <script src="static/js/jquery.js"></script>
+  <script src="static/js/bootstrap.js"></script>
+</body>
+<script type="text/javascript">
+$('#search').click(function(){
+      $('#show_nlp').show();
+      $('#show_nlp_1').show();
+
+
+});
+
+</script>
+</html>

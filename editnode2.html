@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="static/css/style.css">
 </head>
 
-<body class="modal-open">
+<body class="modal-open" id='bd' style="padding-right: 17px;">
   <nav class="navbar">
     <h1 class="mx-16 font-bold text-4xl">基于知识图谱的粮食仓储工艺及进出仓设备智能决策系统</h1>
     <div class="mx-auto">
@@ -26,9 +26,9 @@
         <li>
           <a class="sidebar-open" href="">知识查询</a>
           <ul>
-            <li><a href="nlpsearch.html"> 自然语言查询</a></li>
-            <li class="active"><a href="#">实体查询</a></li>
-            <li><a href="cy.html">Cypher语言查询</a></li>
+            <li><a href="nlpsearch.html">自然语言查询</a></li>
+            <li><a href="index.html">实体查询</a></li>
+            <li><a href="cy.html">Cypher查询</a></li>
           </ul>
         </li>
         <li>
@@ -38,7 +38,7 @@
               <a class="sidebar-open" href="">节点管理</a>
               <ul>
                 <li><a href="">创建节点</a></li>
-                <li><a href="editnode.html">修改节点</a></li>
+                <li class="active"><a href="">修改节点</a></li>
                 <li><a href="">删除实体</a></li>
               </ul>
             </li>
@@ -46,7 +46,7 @@
               <a class="sidebar-open" href="">关系管理</a>
 			     <ul>
                 <li><a href="">创建关系</a></li>
-                 <li><a class="active" href="editrela.html">修改关系</a></li>
+               <li><a  href="editrela.html">修改关系</a></li>
                 <li><a href="">删除关系</a></li>
               </ul>
             </li>
@@ -64,16 +64,17 @@
     </div>
     <div class="content flex-1">
       <div class="toolbar">
-        <p class= "toolbar-mx-16 text-3xl"> 仓储工艺及进出仓设备知识图谱</p>
+        <p class="toolbar-title">仓储工艺及进出仓设备知识图谱</p>
       </div>
       <div class="toolbar">
-        功能应用模块：
-        <button class="btn btn-danger">仓储工艺模块</button>
-        <button class="btn btn-safe">设备选型模块</button>
+        功能应用：
+        <button class="btn btn-safe">仓储工艺模块</button>
+        <button class="btn btn-danger">设备选型模块</button>
         <button class="btn btn-primary">科学计量分析模块</button>
         <button class="btn btn-warn">设备创新设计模块</button>
         <button class="btn btn-gray">相关专利</button>
 		  <button class="btn btn-gray">相关论文</button>
+       <!-- <button id="popmodal" class="btn btn-primary" data-toggle="modal" data-target="#myModal">弹出</button> -->
         <button class="btn btn-holo">+</button>
       </div>
       <div class="toolbar">
@@ -87,54 +88,47 @@
         <button class="btn-rounded btn-holo">+</button>
       </div>
       <div class="toolbar">
-       实体查询:
-        <input id='content' value=粮食仓储知识 type="search" placeholder="请输入要搜索的内容">
-        <a id='search' class="iconfont search-button" href="javascript:void(0);"></a>
+        实体查询：
+        <input id='content' value=斗式提升机 type="search" placeholder="请输入要搜索的内容">
+        <a class="iconfont search-button" href=""></a>
         <input type="radio" name="query-mode" id="exact_match"><label for="exact_match">精确查询</label>&nbsp;
         <input type="radio" name="query-mode" id="fuzzy_match"><label for="fuzzy_match">模糊查询</label>&nbsp;
-        <span class="object-search-info">选中节点：<font style="font-weight: bolder; -webkit-box-shadow: 0px 0px #000000; box-shadow: 0px 0px #000000; font-size: 12px; color: #000000;">粮食仓储知识</font></span>
-        <span class="object-search-info">关系数量:10</span>
-        <span class="object-search-info">可拓展性:是</span>
+        <span class="object-search-info">选中节点：</span>
+        <span class="object-search-info">关系数量：</span>
+        <span class="object-search-info">可拓展性：</span>
         <span class="node-display-max">显示节点个数：
-          <a class="active" href="">50</a>
-	    <a href="">100</a>
-          <a href="">300</a>
-		<a href="">500</a>
-            <a href="">1000</a>
+			 <a href="">50</a>
+          <a href="">100</a>
+          <a class="active" href="">300</a>
+          <a href="">500</a>
+          <a href="">1000</a>
         </span>
         <a class="toolbar-action" href=""><i class="iconfont icon-reload"></i>刷新</a>
         <a class="toolbar-action" href=""><i class="iconfont icon-fullscreen"></i>全屏</a>
       </div>
       <div class="toolbar">
         您可能查找的是：
-        <button class="btn btn-info">储粮特性</button>
-		  <button class="btn btn-primary">储粮技术</button>
-		   <button class="btn btn-danger">项目实例</button>
+        <button class="btn-small btn-tag">斗式提升机专利</button>
       </div>
-	  <div>
-			 <img style="margin-left:5%;" src='img/index.png'>
-       <span id='show_msg' style='display:none'></span>
-	  </div>
-      <!-- 在这里添加内容 -->
+      <img style="margin-left:15%;" src='img/index5.svg'>
     </div>
   </div>
-
-   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+ <div class="modal fade show" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="padding-right: 17px; display: block;" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title" id="myModalLabel">节点信息</h4>
-          <button type="button" class="close" data-dismiss="modal" id='close' aria-hidden="true">&times;</button>
+          <button type="button" id='close' class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body container px-5">
           <form>
             <div class="form-group row">
               <label for="nodeName" class="col-sm-3 col-form-label">节点名称</label>
-              <div class="col-sm-9"><input type="text" value='起升机构' class="form-control" id="nodeName"></div>
+              <div class="col-sm-9"><input type="text" value='料斗' class="form-control" id="nodeName"></div>
             </div>
             <div class="form-group row">
-              <label for="alias" class="col-sm-3 col-form-label">别名</label>
-              <div class="col-sm-9"><input type="text" value="提升机构" class="form-control" id="alias"></div>
+              <label for="alias" class="col-sm-3 col-form-label">模块类型</label>
+              <div class="col-sm-9"><input type="text" value="变型模块" class="form-control" id="alias"></div>
             </div>
             <div class="form-group row">
               <label for="nodeType" class="col-sm-3 col-form-label">所属类型</label>
@@ -163,8 +157,12 @@
             <div class="form-group row">
               <label for="nodeInfo" class="col-sm-3 col-form-label">属性信息</label>
               <div class="col-sm-9">
-                <textarea name="nodeInfo" rows="5" class="w-100" style="overflow-y: scroll;">
-起升机构，又叫"提升机构"，是起重机必备的、对物品进行升降运作的基本构成。起升机构由起升电机通过联轴器经减速器空心轴驱动卷筒旋转，从而使绕在卷筒上的钢丝绳/缆线带动吊钩装置上升或下降。针对不同的起升高度可能需要配置对应的联轴器及支持架。起升机构工作的好坏将直接影响整台起重机的工作性能。
+                <textarea name="nodeInfo" rows="6" class="w-100" style="overflow-y: scroll;"> 料斗属于斗式提升机的子模块，决定其效率和性能；
+ 料斗类型分为：浅斗型、带挡边型和深斗型；
+ 料斗结构分为：圆底状、圆柱状和U型状；
+ 料斗材料分为：金属材料、高分子材料、复合材料；
+ 料斗布置形式：单列形式布置、双列错排布置；
+ 料斗工况情况：物料容重、物料温度和提升速度。				
                 </textarea>
               </div>
             </div>
@@ -180,44 +178,19 @@
   </div>
   <script src="static/js/jquery.js"></script>
   <script src="static/js/bootstrap.js"></script>
+    <div id='shadow' class="modal-backdrop fade show"></div>
 </body>
 
-</html>
-
-<script>
-$('#search').click(function(){
-	var search = $('#content').val();
-	search = search.replace(/\s+/g,"");
-	if (search == '') {
-    $('#show_msg').hide();
-    $('#show_img').hide();
-    alert('请输入检索内容');
-    return;
-	}
-
-  if (search == '小车运行机构') {
-    $('#show_img').show();
-    $('#show_msg').hide();
-  } else {
-     $('#show_msg').show();
-     $('#show_img').hide();
-  }
-
-	
-
-});
-
-
-$('#show_img').click(function(){
-      $('#myModal').show();
-      $('#myModal').addClass('show');
-
-});
-
-$('#close').click(function(){
+<script type="text/javascript">
+  $('#close').click(function(){
+      $('#shadow').removeAttr('class');
+      $('#myModal').removeAttr('class');
       $('#myModal').hide();
-      $('#myModal').removeClass('show');
+
+      $('#bd').removeAttr('class');
+       $('#bd').removeAttr('style');
 
 });
 
 </script>
+</html>

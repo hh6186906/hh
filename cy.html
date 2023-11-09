@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="static/css/bootstrap.css">
+  <link rel="stylesheet" href="static/css/tailwind.css">
+  <link rel="stylesheet" href="static/css/iconfont.css">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <h1 class="mx-16 font-bold text-2xl">煤矿开发系统</h1>
+    <div class="mx-auto">
+      <a href="">主页</a>
+      <a href="">测试</a>
+      <a href="">导航</a>
+    </div>
+  </nav>
+  <div class="main">
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a class="sidebar-open" href="">知识查询</a>
+          <ul>
+            <li ><a href="#">自然语言查询</a></li>
+            <li><a href="index.html">实体查询</a></li>
+            <li class="active"><a href="#">Cypher查询</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="sidebar-open" href="">知识管理</a>
+          <ul>
+            <li>
+              <a class="sidebar-open" href="">节点管理</a>
+              <ul>
+                <li><a href="">创建节点</a></li>
+                <li><a href="editnode.html">修改节点</a></li>
+                <li><a href="">删除实体</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="sidebar-open" href="">关系管理</a>
+			   <ul>
+                <li><a href="">创建关系</a></li>
+                <li class="active"><a class="active" href="editrela.html">修改关系</a></li>
+                <li><a href="">删除关系</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class="sidebar-open" href="">数据存取</a>
+          <ul>
+            <li><a href="#">导入图谱</a></li>
+            <li><a href="#">导出图谱</a></li>
+          </ul>
+        </li>
+        <li><a class="sidebar-close" href="#">帮助</a></li>
+      </ul>
+    </div>
+    <div class="content flex-1">
+      <div class="toolbar">
+        <p class="toolbar-title">煤矿领域知识图谱智能查询</p>
+      </div>
+      <div class="toolbar">
+        请输入查询语句：
+        <input type="search">
+        <a class="iconfont search-button" href=""></a>
+      </div>
+      <div class="toolbar">
+        特征提取结果：<textarea cols="30" rows="1"></textarea>
+      </div>
+      <div class="toolbar">
+        问题答案：<textarea cols="40" rows="1"></textarea>
+      </div>
+      <div class="toolbar">
+        <p style="padding-left: 50px;font-size:20px">查询结果展示</p>
+      </div>
+      <!-- 在这里添加内容 -->
+    </div>
+  </div>
+  <script src="static/js/jquery.js"></script>
+  <script src="static/js/bootstrap.js"></script>
+</body>
+
+</html>
